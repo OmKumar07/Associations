@@ -1,0 +1,494 @@
+Colors,Red
+Colors,Blue
+Colors,Green
+Colors,Yellow
+Colors,Cyan
+Colors,Purple
+Colors,Pink
+Colors,Brown
+Colors,Black
+Colors,White
+Numbers,Five
+Numbers,Ten
+Numbers,Twenty
+Numbers,Hundred
+Numbers,Thousand
+Numbers,One
+Numbers,Zero
+Numbers,Nine
+Numbers,Twelve
+Numbers,Eleven
+Animals,Lion
+Animals,Elephant
+Animals,Tiger
+Animals,Giraffe
+Animals,Kangaroo
+Animals,Zebra
+Animals,Panda
+Animals,Dog
+Animals,Cat
+Animals,Donkey
+Birds,Eagle
+Birds,Parrot
+Birds,Owl
+Birds,Peacock
+Birds,Sparrow
+Birds,Crow
+Birds,Falcon
+Birds,Swan
+Birds,Vulture
+Birds,Seagull
+Fruits,Apple
+Fruits,Banana
+Fruits,Orange
+Fruits,Mango
+Fruits,Pineapple
+Fruits,Grapes
+Fruits,Strawberry
+Fruits,Blueberry
+Fruits,Kiwi
+Fruits,Watermelon
+Vegetables,Cabbage
+Vegetables,Tomato
+Vegetables,Potato
+Vegetables,Spinach
+Vegetables,Broccoli
+Vegetables,Onion
+Vegetables,Cucumber
+Vegetables,Lettuce
+Vegetables,Cauliflower
+Vegetables,Radish
+Countries,USA
+Countries,UK
+Countries,Canada
+Countries,France
+Countries,Germany
+Countries,China
+Countries,India
+Countries,Japan
+Countries,Australia
+Countries,Italy
+Weather,Sunny
+Weather,Cloudy
+Weather,Hail
+Weather,Stormy
+Weather,Windy
+Weather,Thunderstorms
+Weather,Foggy
+Weather,Drizzle
+Weather,Blizzard
+Weather,Tornado
+Water Bodies,Ocean
+Water Bodies,Sea
+Water Bodies,Lake
+Water Bodies,River
+Water Bodies,Pond
+Water Bodies,Stream
+Water Bodies,Canal
+Water Bodies,Bay
+Water Bodies,Lagoon
+Water Bodies,Waterfall
+Languages,English
+Languages,Spanish
+Languages,Mandarin
+Languages,Hindi
+Languages,French
+Languages,Arebic
+Languages,Bengali
+Languages,Urdu
+Languages,German
+Languages,Japanese
+Sports,Soccer
+Sports,Basketball
+Sports,Cricket
+Sports,Tennis
+Sports,Baseball
+Sports,Table Tennis
+Sports,Rugby
+Sports,Golf
+Sports,Ice Hockey
+Sports,Swimming
+Body Parts,Head
+Body Parts,Eyes
+Body Parts,Ears
+Body Parts,Nose
+Body Parts,Mouth
+Body Parts,Teeth
+Body Parts,Tongue
+Body Parts,Neck
+Body Parts,Leg
+Body Parts,Hand
+Flowers,Rose
+Flowers,Tulip
+Flowers,Daisy
+Flowers,Sunflower
+Flowers,Orchid
+Flowers,Lily
+Flowers,Jasmine
+Flowers,Lavender
+Flowers,Magnolia
+Flowers,Iris
+Foods,Pizza
+Foods,Sushi
+Foods,burger
+Foods,Tacos
+Foods,Pasta
+Foods,Ramen
+Foods,Donuts
+Foods,Sandwich
+Foods,Burrito
+Foods,Curry
+Shapes,Circle
+Shapes,Square
+Shapes,Rectangle
+Shapes,Triangle
+Shapes,Oval
+Shapes,Ellipse
+Shapes,Pentagon
+Shapes,Hexagon
+Shapes,Parallelogram
+Shapes,Rhombus
+Emotions,Happiness
+Emotions,Sadness
+Emotions,Anger
+Emotions,Fear
+Emotions,Surprise
+Emotions,Disgust
+Emotions,Excitement
+Emotions,Anxiety
+Emotions,Joy
+Emotions,Embarrassment
+Stationery,Pen
+Stationery,Pencil
+Stationery,Eraser
+Stationery,Notebook
+Stationery,Ruler
+Stationery,Marker
+Stationery,Highlighter
+Stationery,Sharpener
+Stationery,Paper Clips
+Stationery,Stapler
+Beverages,Coffee
+Beverages,Tea
+Beverages,Juice
+Beverages,Soda
+Beverages,Milk
+Beverages,Lemonade
+Beverages,Iced Tea
+Beverages,Hot Chocolate
+Beverages,Wine
+Beverages,Beer
+Zodiac Sign,Aries
+Zodiac Sign,Taurus
+Zodiac Sign,Gemini
+Zodiac Sign,Cancer
+Zodiac Sign,Leo
+Zodiac Sign,Virgo
+Zodiac Sign,Libra
+Zodiac Sign,Scorpio
+Zodiac Sign,Sagittarius
+Zodiac Sign,Capricorn
+Family,Mother
+Family,Father
+Family,Sister
+Family,Brother
+Family,Son
+Family,Daughter
+Family,Uncle
+Family,Niece
+Family,Nephew
+Family,Cousin
+City,New York
+City,Paris
+City,Tokyo
+City,London
+City,Sydney
+City,Cairo
+City,Berlin
+City,Rome
+City,Los Angeles
+City,Moscow
+Music Instrument,Guitar
+Music Instrument,Piano
+Music Instrument,Violin
+Music Instrument,Drums
+Music Instrument,Saxophone
+Music Instrument,Trumpet
+Music Instrument,Flute
+Music Instrument,Bass
+Music Instrument,Cello
+Music Instrument,Harmonica
+Occupation,Doctor
+Occupation,Teacher
+Occupation,Engineer
+Occupation,Chef
+Occupation,Pilot
+Occupation,Lawyer
+Occupation,Artist
+Occupation,Farmer
+Occupation,Nurse
+Occupation,Mechanic
+Vehicles,Car
+Vehicles,Bicycle
+Vehicles,Aiplane
+Vehicles,Train
+Vehicles,Bus
+Vehicles,Boat
+Vehicles,Motorcycle
+Vehicles,Helicopter
+Vehicles,Truck
+Vehicles,Submarine
+Seasons,Winter
+Seasons,Spring
+Seasons,Summer
+Seasons,Fall
+Seasons,Rainy
+Seasons,Dry
+Seasons,Monsoon
+Seasons,Harvest
+Seasons,Snowy
+Seasons,Humid
+Astronomy,Sun
+Astronomy,Moon
+Astronomy,Planet
+Astronomy,Star
+Astronomy,Galaxy
+Astronomy,Comet
+Astronomy,Meteor
+Astronomy,Black Hole
+Astronomy,Asteroid
+Astronomy,Satellite
+Furniture,Sofa
+Furniture,Bed
+Furniture,Chair
+Furniture,Table
+Furniture,Lamp
+Furniture,Dresser
+Furniture,Wardrobe
+Furniture,Bookshelf
+Furniture,Coffee Table
+Furniture,Desk
+Clothes,Jeans
+Clothes,Jacket
+Clothes,T-shirt
+Clothes,Dress
+Clothes,Suit
+Clothes,Skirt
+Clothes,Shoes
+Clothes,Coat
+Clothes,Vest
+Clothes,Sweater
+Superheroes,Superman
+Superheroes,Batman
+Superheroes,Spider-Man
+Superheroes,Wonder Woman
+Superheroes,Iron Man
+Superheroes,Captain America
+Superheroes,Black Panther
+Superheroes,Thor
+Superheroes,Hulk
+Superheroes,Aquaman
+Ocean Life,Shark
+Ocean Life,Whale
+Ocean Life,Dolphin
+Ocean Life,Octopus
+Ocean Life,Sea Turtle
+Ocean Life,Jellyfish
+Ocean Life,Seahorse
+Ocean Life,Starfish
+Ocean Life,Squid
+Ocean Life,Coral
+Chemistry,Hydrogen
+Chemistry,Oxygen
+Chemistry,Carbon
+Chemistry,Nitrogen
+Chemistry,Helium
+Chemistry,Potassium
+Chemistry,Iron
+Chemistry,Sodium
+Chemistry,Copper
+Chemistry,Magnesium
+Music Genre,Rock
+Music Genre,Jazz
+Music Genre,Classical
+Music Genre,Pop
+Music Genre,Hip Hop
+Music Genre,Country
+Music Genre,Blues
+Music Genre,Reggae
+Music Genre,EDM
+Music Genre,R&B
+Accessories,Watch
+Accessories,Necklace
+Accessories,Bracelet
+Accessories,Ring
+Accessories,Hat
+Accessories,Sunglasses
+Accessories,Scarf
+Accessories,Earrings
+Accessories,Gloves
+Mountains,Belt
+Mountains,Everest
+Mountains,Kilimanjaro
+Mountains,Fuji
+Mountains,Rushmore
+Mountains,Mckinley
+Mountains,Matterhorn
+Mountains,Elbrus
+Mountains,K2
+Mountains,Denali
+Mountains,Vesuvius
+Dogs,Labrador Retriever
+Dogs,German Shepherd
+Dogs,Golden Retriever
+Dogs,Bulldog
+Dogs,Poodle
+Dogs,Beagle
+Dogs,Rottweiler
+Dogs,Dachshund
+Dogs,Boxer
+Dogs,Shih Tzu
+Fish,Salmon
+Fish,Tuna
+Fish,Halibut
+Fish,Trout
+Fish,Sardine
+Fish,Snapper
+Fish,Herring
+Fish,Mackerel
+Fish,Betta
+Fish,Clownfish
+Weapons,Sword
+Weapons,Gun
+Weapons,Arrow
+Weapons,Axe
+Weapons,Spear
+Weapons,Mace
+Weapons,Dagger
+Weapons,Hammer
+Weapons,Shield
+Weapons,Grenade
+Boy,James
+Boy,William
+Boy,Tom
+Boy,Lucas
+Boy,Ethan
+Boy,Alexander
+Boy,Jacob
+Boy,Michael
+Boy,Daniel
+Boy,Matthew
+Girl,Olivia
+Girl,Emma
+Girl,Sophia
+Girl,Ava
+Girl,Isabella
+Girl,Mia
+Girl,Amelia
+Girl,Charlotte
+Girl,Harper
+Girl,Lisa
+Religion,Christianity
+Religion,Islam
+Religion,Hinduism
+Religion,Buddhism
+Religion,Judaism
+Religion,Sikhism
+Religion,Taoism
+Religion,Shinto
+Religion,Bahá'í Faith
+Religion,Jainism
+Planets,Mars
+Planets,Mercury
+Planets,Venus
+Planets,Earth
+Planets,Jupiter
+Planets,Saturn
+Planets,Uranus
+Planets,Neptune
+Planets,Pluto
+Marriage,Honeymoon
+Marriage,Groom
+Marriage,Ceremony
+Marriage,Vows
+Marriage,Wedding
+Marriage,Anniversary
+Marriage,Love
+Marriage,Bride
+Greek Letters,Alpha
+Greek Letters,Beta
+Greek Letters,Delta
+Greek Letters,Gamma
+Greek Letters,Epsilon
+Greek Letters,Zeta
+Greek Letters,Eta
+Greek Letters,Theta
+Currencies,Dollar
+Currencies,Euro
+Currencies,Rupee
+Currencies,Yen
+Currencies,Franc
+Currencies,Yuan
+Currencies,Real
+Currencies,Krona
+Months,January
+Months,February
+Months,March
+Months,April
+Months,May
+Months,June
+Months,July
+Months,August
+Months,September
+Months,October
+Months,November
+Months,December
+Dances,Ballet
+Dances,Salsa
+Dances,Tango
+Dances,Waltz
+Dances,HipHop
+Dances,Rumba
+Dances,Samba
+Dances,Disco
+Hats,Fedora
+Hats,Beanie
+Hats,Beret
+Hats,Cloche
+Hats,Trilby
+Hats,Visor
+Hats,Sombrero
+Hats,Top Hat
+Book Genres,Fiction
+Book Genres,Fantasy
+Book Genres,Mystery
+Book Genres,Thriller
+Book Genres,Historical
+Book Genres,Horror
+Book Genres,Biography
+Book Genres,Poetry
+Measurement,Kilogram
+Measurement,Inch
+Measurement,Ounce
+Measurement,Liter
+Measurement,Second
+Measurement,Joule
+Measurement,Watt
+Measurement,Hertz
+Mythical Creatures,Dragon
+Mythical Creatures,Phoenix
+Mythical Creatures,Unicorn
+Mythical Creatures,Griffin
+Mythical Creatures,Mermaid
+Mythical Creatures,Cantaur
+Mythical Creatures,Chimera
+Mythical Creatures,Vampire
+Household Appliances,Blender
+Household Appliances,Toaster
+Household Appliances,Oven
+Household Appliances,Fan
+Household Appliances,Microwave
+Household Appliances,Heater
+Household Appliances,Refrigerator
+Household Appliances,Dishwasher
+Household Appliances,Kettle
