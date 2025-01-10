@@ -498,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allCategories: []
   delimiter: 44
-  shuffleIntensity: 0.1
+  shuffleIntensity: 0
 --- !u!114 &941176352
 MonoBehaviour:
   m_ObjectHideFlags: 0

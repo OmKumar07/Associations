@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
             uiManager.DisplayWords(wordCategoryMapping);
             yield return new WaitForSeconds(0.5f);
-            uiManager.gameBoard.GetComponent<GridLayoutGroup>().enabled = false;
+            //uiManager.gameBoard.GetComponent<GridLayoutGroup>().enabled = false;
         }
         else
         {
