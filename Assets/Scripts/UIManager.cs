@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public Transform gameBoard; // Parent object for rows
-    public GameObject rowPrefab; // Prefab for a row with GridLayoutGroup
+    public Transform gameBoard;
+    public GameObject rowPrefab;
     public GameObject wordButtonPrefab;
     public GameObject winMessage;
     public TextMeshProUGUI currentLevel;
@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     private List<GameObject> draggedButtons = new List<GameObject>();
     private string dragCategory = null;
     private bool isMixedCategory = false;
+    private int life = 3;
 
     private void Start()
     {
@@ -29,13 +30,11 @@ public class UIManager : MonoBehaviour
 
     public void DisplayWords(Dictionary<string, string> wordCategoryMapping)
     {
-        // Clear the game board
         foreach (Transform child in gameBoard)
         {
             Destroy(child.gameObject);
         }
 
-        // Create 10 rows
         List<GameObject> rows = new List<GameObject>();
         for (int i = 0; i < 10; i++)
         {
@@ -43,7 +42,6 @@ public class UIManager : MonoBehaviour
             rows.Add(row);
         }
 
-        // Distribute words into rows (4 words per row)
         int index = 0;
         foreach (var pair in wordCategoryMapping)
         {
@@ -54,7 +52,6 @@ public class UIManager : MonoBehaviour
             button.GetComponentInChildren<TextMeshProUGUI>().text = word;
             button.tag = category;
 
-            // Add event triggers for drag detection
             EventTrigger trigger = button.AddComponent<EventTrigger>();
             AddEventTrigger(trigger, EventTriggerType.PointerDown, (data) => OnButtonPressed(button, word, category));
             AddEventTrigger(trigger, EventTriggerType.PointerUp, (data) => StartCoroutine(OnButtonReleased()));
@@ -65,13 +62,11 @@ public class UIManager : MonoBehaviour
 
         categoryText.text = "Categories: " + string.Join(", ", new HashSet<string>(wordCategoryMapping.Values));
 
-        // Start coroutine to disable grid layout after Unity updates the layout
         StartCoroutine(DisableGridLayouts(rows));
     }
 
     private IEnumerator DisableGridLayouts(List<GameObject> rows)
     {
-        // Wait for the end of the current frame to ensure Unity calculates the layout
         yield return new WaitForEndOfFrame();
 
         foreach (var row in rows)
@@ -102,6 +97,11 @@ public class UIManager : MonoBehaviour
 
         if (isMixedCategory)
         {
+            life--;
+            if (life == 0)
+            {
+                Debug.LogError("You Loose !");
+            }
             Debug.Log("Lost one life! Dragged over multiple categories.");
             foreach (GameObject button in draggedButtons)
             {
@@ -120,7 +120,6 @@ public class UIManager : MonoBehaviour
 
             for (int i = 0; i < draggedButtons.Count - 1; i++)
             {
-                // Destroy all but the last button
                 Destroy(draggedButtons[i]);
             }
 
@@ -199,7 +198,6 @@ public class UIManager : MonoBehaviour
     {
         Dictionary<string, int> categoryCounts = new Dictionary<string, int>();
 
-        // Iterate through all rows in the gameBoard
         foreach (Transform row in gameBoard)
         {
             foreach (Transform button in row)
@@ -214,7 +212,6 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        // Identify and remove the last remaining button of a category
         foreach (KeyValuePair<string, int> pair in categoryCounts)
         {
             if (pair.Value == 1)
@@ -228,8 +225,7 @@ public class UIManager : MonoBehaviour
                             Debug.Log($"Disabling the last button for category: {pair.Key}");
                             button.gameObject.SetActive(false);
 
-                            // Check if the row is now empty
-                            if (row.childCount == 1) // Only the button being deactivated remains
+                            if (row.childCount == 1)
                             {
                                 Debug.Log($"Row {row.name} is now empty. Destroying row.");
                                 Destroy(row.gameObject);

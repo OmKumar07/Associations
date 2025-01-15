@@ -6,27 +6,25 @@ using UnityEngine.UI;
 
 public class DeveloperMenuManager : MonoBehaviour
 {
-    public GameObject developerMenu; // The developer menu UI
-    public Slider volumeSlider;      // Slider for adjusting a value (e.g., volume)
-    public  float volumeLevel; // Public variable to store the slider value
+    public GameObject developerMenu;
+    public Slider volumeSlider;
+    public  float volumeLevel;
 
-    private const string VolumePrefKey = "VolumeLevel"; // Key for PlayerPrefs
+    private const string VolumePrefKey = "VolumeLevel";
 
     private void Start()
     {
-        // Load the saved volume value from PlayerPrefs
-        volumeLevel = PlayerPrefs.GetFloat(VolumePrefKey, 1.0f); // Default to 1.0 if not set
+        volumeLevel = PlayerPrefs.GetFloat(VolumePrefKey, 1.0f);
         volumeSlider.value = volumeLevel;
 
-        // Subscribe to the slider's value change event
         volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
     }
 
     private void OnVolumeChanged(float value)
     {
-        volumeLevel = value; // Update the public variable
-        PlayerPrefs.SetFloat(VolumePrefKey, value); // Save the value in PlayerPrefs
-        PlayerPrefs.Save(); // Ensure the changes are saved immediately
+        volumeLevel = value;
+        PlayerPrefs.SetFloat(VolumePrefKey, value);
+        PlayerPrefs.Save();
     }
 
     public void EnableMenu()
