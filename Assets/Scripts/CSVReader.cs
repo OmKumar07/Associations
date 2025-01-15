@@ -13,8 +13,13 @@ public class CSVReader : MonoBehaviour
     public List<CategoryData> allCategories = new List<CategoryData>();
 
     public char delimiter = ',';
+    public DeveloperMenuManager menuManager;
 
     [Range(0, 1)] public float shuffleIntensity = 1f;
+    private void Start()
+    {
+        shuffleIntensity = PlayerPrefs.GetFloat("VolumeLevel");
+    }
 
     public void LoadCSV(string fileName)
     {
