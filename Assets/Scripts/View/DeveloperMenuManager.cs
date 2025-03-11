@@ -8,7 +8,7 @@ public class DeveloperMenuManager : MonoBehaviour
 {
     public GameObject developerMenu;
     public Slider volumeSlider;
-    public  float volumeLevel;
+    public float volumeLevel;
 
     private const string VolumePrefKey = "VolumeLevel";
 

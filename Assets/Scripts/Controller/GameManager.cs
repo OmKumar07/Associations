@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         csvReader.LoadCSV("csvdata");
 
-        levelCategories.Add(new List<string> { "Numbers", "Colors","Animals", "Body Parts", "Fruits", "Birds", "Countries", "Family" }); // Level 1
-        levelCategories.Add(new List<string> { "Birds", "Weather", "Sports", "Languages", "Foods", "Occupation", "Stationery","Beverages" }); // Level 2
-        levelCategories.Add(new List<string> { "Dances", "Months", "Currencies", "Greek Letters", "Planets", "Weapons","Chemistry", "Furniture" }); // Level 3
-        levelCategories.Add(new List<string> { "Fish","Boy","Birds","Accessories","Ocean Life","Shapes", "Zodiac Sign","Emotions" }); // Level 4
-        levelCategories.Add(new List<string> { "Astronomy","Weather","Superheroes","City","Flowers","Music Genre","Dogs","Marriage" }); // Level 5
+        levelCategories.Add(new List<string> { "Numbers", "Colors", "Animals", "Body Parts", "Fruits", "Birds", "Countries", "Family" }); // Level 1
+        levelCategories.Add(new List<string> { "Birds", "Weather", "Sports", "Languages", "Foods", "Occupation", "Stationery", "Beverages" }); // Level 2
+        levelCategories.Add(new List<string> { "Dances", "Months", "Currencies", "Greek Letters", "Planets", "Weapons", "Chemistry", "Furniture" }); // Level 3
+        levelCategories.Add(new List<string> { "Fish", "Boy", "Birds", "Accessories", "Ocean Life", "Shapes", "Zodiac Sign", "Emotions" }); // Level 4
+        levelCategories.Add(new List<string> { "Astronomy", "Weather", "Superheroes", "City", "Flowers", "Music Genre", "Dogs", "Marriage" }); // Level 5
 
         StartCoroutine(LoadLevel(currentLevel));
     }

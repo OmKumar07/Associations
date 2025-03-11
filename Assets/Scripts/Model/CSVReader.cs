@@ -1,8 +1,9 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CSVReader : MonoBehaviour
 {
+    public static Dictionary<string, int> categoryWordCountsGlobal = new Dictionary<string, int>();
     [System.Serializable]
     public class CategoryData
     {
@@ -66,10 +67,10 @@ public class CSVReader : MonoBehaviour
     }
 
     public Dictionary<string, string> GetWordsFromCategories(
-    List<string> categories,
-    int minWordsPerCategory,
-    int maxWordsPerCategory,
-    int totalWordCount)
+        List<string> categories,
+        int minWordsPerCategory,
+        int maxWordsPerCategory,
+        int totalWordCount)
     {
         Dictionary<string, string> wordCategoryMapping = new Dictionary<string, string>();
         System.Random random = new System.Random();
@@ -105,6 +106,9 @@ public class CSVReader : MonoBehaviour
             int maxPossible = Mathf.Min(maxWordsPerCategory, validCategories[i].words.Count);
             categoryWordCounts[i] = Mathf.Min(baseWordsPerCategory, maxPossible);
             remainingWords -= categoryWordCounts[i];
+
+            // ✅ Store total category word count globally
+            categoryWordCountsGlobal[validCategories[i].category] = validCategories[i].words.Count;
         }
 
         while (remainingWords > 0)
@@ -163,43 +167,45 @@ public class CSVReader : MonoBehaviour
 
 
 
-    public Dictionary<string, string> GetRandomWords(int totalWords)
-    {
-        Dictionary<string, string> wordCategoryMapping = new Dictionary<string, string>();
 
-        System.Random random = new System.Random();
-        List<CategoryData> shuffledCategories = new List<CategoryData>(allCategories);
 
-        if (shuffleIntensity > 0)
-        {
-            shuffledCategories.Sort((a, b) => random.Next(-1, 2));
-        }
+    //public Dictionary<string, string> GetRandomWords(int totalWords)
+    //{
+    //    Dictionary<string, string> wordCategoryMapping = new Dictionary<string, string>();
 
-        foreach (CategoryData category in shuffledCategories)
-        {
-            if (wordCategoryMapping.Count >= totalWords) break;
+    //    System.Random random = new System.Random();
+    //    List<CategoryData> shuffledCategories = new List<CategoryData>(allCategories);
 
-            int remainingWords = totalWords - wordCategoryMapping.Count;
+    //    if (shuffleIntensity > 0)
+    //    {
+    //        shuffledCategories.Sort((a, b) => random.Next(-1, 2));
+    //    }
 
-            List<string> shuffledWords = new List<string>(category.words);
+    //    foreach (CategoryData category in shuffledCategories)
+    //    {
+    //        if (wordCategoryMapping.Count >= totalWords) break;
 
-            if (shuffleIntensity > 0)
-            {
-                shuffledWords.Sort((a, b) => random.Next(-1, 2));
-            }
+    //        int remainingWords = totalWords - wordCategoryMapping.Count;
 
-            for (int i = 0; i < Mathf.Min(remainingWords, shuffledWords.Count); i++)
-            {
-                string word = shuffledWords[i];
-                wordCategoryMapping[word] = category.category;
-            }
-        }
+    //        List<string> shuffledWords = new List<string>(category.words);
 
-        return wordCategoryMapping;
-    }
+    //        if (shuffleIntensity > 0)
+    //        {
+    //            shuffledWords.Sort((a, b) => random.Next(-1, 2));
+    //        }
 
-    public void ClearData()
-    {
-        allCategories.Clear();
-    }
+    //        for (int i = 0; i < Mathf.Min(remainingWords, shuffledWords.Count); i++)
+    //        {
+    //            string word = shuffledWords[i];
+    //            wordCategoryMapping[word] = category.category;
+    //        }
+    //    }
+
+    //    return wordCategoryMapping;
+    //}
+
+    //public void ClearData()
+    //{
+    //    allCategories.Clear();
+    //}
 }
