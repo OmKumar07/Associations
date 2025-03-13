@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public Transform gameBoard;
-    public GameObject rowPrefab;
     public GameObject wordButtonPrefab;
     public GameObject winMessage;
     public TextMeshProUGUI currentLevel;
@@ -39,8 +38,7 @@ public class UIManager : MonoBehaviour
 
     
     public DragController dragController;
-    
-
+    public GridPosition gridPositionScript;
 
     public class ButtonCategory : MonoBehaviour
     {
@@ -48,7 +46,6 @@ public class UIManager : MonoBehaviour
     }
     private void Start()
     {
-
         currentLevel.text = "Level " + gameManager.currentLevel.ToString();
         winMessage.SetActive(false);
 
@@ -123,21 +120,17 @@ public class UIManager : MonoBehaviour
     public void DisplayWords(Dictionary<string, string> wordCategoryMapping)
     {
         DisplayCategories(new HashSet<string>(wordCategoryMapping.Values));
-
-        List<GameObject> rows = new List<GameObject>();
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject row = Instantiate(rowPrefab, gameBoard);
-            rows.Add(row);
-        }
-
         int index = 0;
         foreach (var pair in wordCategoryMapping)
         {
             string word = pair.Key;
             string category = pair.Value;
 
-            GameObject button = Instantiate(wordButtonPrefab, rows[index / 4].transform);
+            Vector2 position = gridPositionScript.GetGridPosition(index);
+
+            GameObject button = Instantiate(wordButtonPrefab, gameBoard);
+            button.transform.localPosition = new Vector3(position.x, position.y, 0);
+
             button.GetComponentInChildren<TextMeshProUGUI>().text = word;
             button.tag = category;
             ButtonCategory buttonCategory = button.AddComponent<ButtonCategory>();
@@ -150,8 +143,6 @@ public class UIManager : MonoBehaviour
 
             index++;
         }
-
-        StartCoroutine(DisableGridLayouts(rows));
     }
 
     private void DisplayCategories(HashSet<string> categories)
